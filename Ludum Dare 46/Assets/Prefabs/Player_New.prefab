@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 1907074337}
   - component: {fileID: 1907074336}
   m_Layer: 5
-  m_Name: f
+  m_Name: Menu UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2011,7 +2011,7 @@ GameObject:
   - component: {fileID: 546954299206464567}
   - component: {fileID: 546954299206464564}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Minimap UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
