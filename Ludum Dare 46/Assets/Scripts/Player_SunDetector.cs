@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class Player_SunDetector : MonoBehaviour
 {
+    //The sun detector will use the transform of the sun to find the shadows
+    //For the script to work you need to move the sun on the Z-Axis from the (0,0,0) point to get it exact
+
     [SerializeField] private Transform SunDirection;
     [SerializeField] private Transform solarPanel;
     [SerializeField] private RaycastHit hit;
 
+    [Header("Player")]
     [SerializeField] private Renderer Player_renderer;
+    [SerializeField] private Transform solarPanelObject;
 
     [SerializeField] private bool InSun;
 
@@ -39,6 +44,10 @@ public class Player_SunDetector : MonoBehaviour
 
         //Clamp the frames
         Charge = Mathf.Clamp(Charge, 0, 100);
+
+        Vector3 lookDir = new Vector3(SunDirection.position.x, transform.position.y, -SunDirection.position.z);
+
+        solarPanelObject.LookAt(lookDir);
 
         //Do a raycast to the sun point light
         if (Physics.Raycast(solarPanel.position, 1f * SunDirection.position, out hit))

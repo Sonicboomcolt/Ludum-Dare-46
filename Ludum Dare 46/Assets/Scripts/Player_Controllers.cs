@@ -31,7 +31,7 @@ public class Player_Controllers : MonoBehaviour
     private void FixedUpdate()
     {
         //Rotate the player based on input
-        transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);
+        transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed * detector.Charge, 0.0f);
 
         //InputX = Input.GetAxisRaw("Horizontal");
         InputY = Input.GetAxis("Vertical");
