@@ -23,12 +23,6 @@ public class Player_WaterSystem : MonoBehaviour
                 Debug.Log("Picked up water");
                 hasWater = true;
             }
-
-            if (!canPickupWater && hasWater && feedPlant)
-            {
-                hasWater = false;
-                feedPlant = false;
-            }
         }
 
         if (Input.GetKeyDown(KeyCode.E) && buttonPress)

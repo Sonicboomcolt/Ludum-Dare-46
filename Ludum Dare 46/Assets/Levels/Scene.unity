@@ -1129,11 +1129,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 546954299206464562, guid: 1f41539c729e423468a7a82e275c232b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1591338166562621269, guid: 1f41539c729e423468a7a82e275c232b,
         type: 3}
       propertyPath: SunDirection
