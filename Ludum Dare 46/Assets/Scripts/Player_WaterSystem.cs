@@ -7,23 +7,43 @@ public class Player_WaterSystem : MonoBehaviour
     public bool canPickupWater;
     public bool hasWater;
     public bool feedPlant;
+    public bool buttonPress;
 
     [SerializeField] GameObject waterObject;
+    [SerializeField] GameObject pubbleObject;
 
     private void Update()
     {
         waterObject.SetActive(hasWater);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if(!buttonPress)
         {
-            if(canPickupWater && !hasWater && !feedPlant)
+            if (canPickupWater && !hasWater && !feedPlant)
             {
-                Debug.Log("Pickedup water");
+                Debug.Log("Picked up water");
+                hasWater = true;
+            }
+
+            if (!canPickupWater && hasWater && feedPlant)
+            {
+                hasWater = false;
+                feedPlant = false;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && buttonPress)
+        {
+            if (canPickupWater && !hasWater && !feedPlant)
+            {
+                Debug.Log("Picked up water");
                 hasWater = true;
             }
 
             if (!canPickupWater && hasWater && !feedPlant)
             {
+                GameObject puddle = Instantiate(pubbleObject, transform.position, transform.rotation);
+                Destroy(puddle, 5f);
+
                 Debug.Log("Dropped water");
                 hasWater = false;
             }

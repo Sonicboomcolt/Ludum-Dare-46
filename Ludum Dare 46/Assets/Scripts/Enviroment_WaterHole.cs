@@ -6,6 +6,7 @@ public class Enviroment_WaterHole : MonoBehaviour
 {
     Player_WaterSystem waterSystem;
 
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
