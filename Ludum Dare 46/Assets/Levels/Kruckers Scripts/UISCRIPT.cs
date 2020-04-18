@@ -25,5 +25,7 @@ public class UISCRIPT : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+	Debug.Log("You Quit you Idiot");
     }
 }
