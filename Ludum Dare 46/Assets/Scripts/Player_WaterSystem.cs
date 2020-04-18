@@ -8,8 +8,12 @@ public class Player_WaterSystem : MonoBehaviour
     public bool hasWater;
     public bool feedPlant;
 
+    [SerializeField] GameObject waterObject;
+
     private void Update()
     {
+        waterObject.SetActive(hasWater);
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if(canPickupWater && !hasWater && !feedPlant)
