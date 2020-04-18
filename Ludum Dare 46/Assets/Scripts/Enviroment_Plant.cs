@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Enviroment_Plant : MonoBehaviour
 {
     [SerializeField] private float decayTime = 15f;
@@ -12,10 +12,10 @@ public class Enviroment_Plant : MonoBehaviour
 
     Player_WaterSystem waterSystem;
 
-    [SerializeField] GameObject plant;
+	[SerializeField] GameObject plant;
 
     private void Start()
-    {
+	{
         plantDead = false;
         cooldownDecayTime = decayTime;
         useButton = true;
@@ -31,7 +31,7 @@ public class Enviroment_Plant : MonoBehaviour
             if (cooldownDecayTime < 0)
             {
                 plantDead = true;
-                Destroy(plant);
+	            Destroy(plant);
             }
         }
     }
@@ -42,7 +42,6 @@ public class Enviroment_Plant : MonoBehaviour
         {
             waterSystem = other.GetComponent<Player_WaterSystem>();
             waterSystem.feedPlant = true;
-
             if (Input.GetKeyDown(KeyCode.E) && !plantDead && !useButton)
             {
                 if (waterSystem.hasWater)
@@ -50,7 +49,7 @@ public class Enviroment_Plant : MonoBehaviour
                     Debug.Log("Feed Plant Water");
                     waterSystem.hasWater = false;
 
-                    cooldownDecayTime = decayTime;
+	                cooldownDecayTime = decayTime;
                 }
             } 
         }
@@ -62,7 +61,6 @@ public class Enviroment_Plant : MonoBehaviour
         {
             waterSystem = other.GetComponent<Player_WaterSystem>();
             waterSystem.feedPlant = true;
-
             if (!plantDead && useButton)
             {
                 if (waterSystem.hasWater)
@@ -71,7 +69,7 @@ public class Enviroment_Plant : MonoBehaviour
                     waterSystem.hasWater = false;
                     waterSystem.feedPlant = false;
 
-                    cooldownDecayTime = decayTime;
+	                cooldownDecayTime = decayTime;
                 }
             }
         }

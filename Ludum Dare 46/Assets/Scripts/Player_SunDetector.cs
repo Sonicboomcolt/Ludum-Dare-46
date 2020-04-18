@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Player_SunDetector : MonoBehaviour
 {
     //The sun detector will use the transform of the sun to find the shadows
@@ -27,12 +27,15 @@ public class Player_SunDetector : MonoBehaviour
 
     [SerializeField] private float dischargeTime = 1f;
     private float discoolDown;
-
+	public Slider slider;
+	public TMPro.TMP_Text Percent;
     private void Start()
     {
         //Set base values
         coolDown = chargeTime;
-        discoolDown = dischargeTime;
+	    discoolDown = dischargeTime;
+	    Percent.text = ("%:" + Charge.ToString());
+	    slider.value = Charge;
     }
 
     private void Update()
@@ -75,7 +78,9 @@ public class Player_SunDetector : MonoBehaviour
         if (coolDown < 0 && Charge < 100)
         {
             Charge += 1;
-            coolDown = chargeTime;
+	        coolDown = chargeTime;
+	        slider.value = Charge;
+	        Percent.text = ("%:" + Charge.ToString());
         }
     }
     
@@ -89,7 +94,9 @@ public class Player_SunDetector : MonoBehaviour
             if (discoolDown < 0)
             {
                 Charge -= 1;
-                discoolDown = dischargeTime;
+	            discoolDown = dischargeTime;
+	            slider.value = Charge;
+	            Percent.text = ("%: " + Charge.ToString());
             }
         }
     }
