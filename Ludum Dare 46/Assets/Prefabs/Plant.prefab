@@ -104,14 +104,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3246986372200688051}
-  m_LocalRotation: {x: -0.7071068, y: -0.000000029802319, z: 0.000000026076986, w: 0.70710677}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -6.055, y: 0.586, z: 3.469}
   m_LocalScale: {x: 21.067, y: 21.067015, z: 21.067015}
   m_Children:
   - {fileID: 7526966506607369380}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!114 &3246986372200688048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decayTime: 35
   cooldownDecayTime: 0
+  plant: {fileID: 7052082149956449169}
 --- !u!135 &3246986372200688014
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -213,6 +214,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db797b8ab9f94a945862e34bdbe4f0b4, type: 3}
+--- !u!1 &7052082149956449169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5535376651021171220, guid: db797b8ab9f94a945862e34bdbe4f0b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3246986370515552645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3246986372292147134
 PrefabInstance:
   m_ObjectHideFlags: 0

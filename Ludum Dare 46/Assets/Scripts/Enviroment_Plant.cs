@@ -10,6 +10,8 @@ public class Enviroment_Plant : MonoBehaviour
 
     Player_WaterSystem waterSystem;
 
+    [SerializeField] GameObject plant;
+
     private void Start()
     {
         plantDead = false;
@@ -26,6 +28,7 @@ public class Enviroment_Plant : MonoBehaviour
             if (cooldownDecayTime < 0)
             {
                 plantDead = true;
+                Destroy(plant);
             }
         }
     }
