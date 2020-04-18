@@ -11,14 +11,14 @@ public class Enviroment_Colors : MonoBehaviour
 
     private void Start()
     {
-        Color pickedColor = colors[Random.Range(0, colors.Count)];
+        //Color pickedColor = colors[Random.Range(0, colors.Count)];
 
         //sets the colors based on the meshses selected.
         foreach (var obj in Meshes)
         {
             try
             {
-                obj.material.SetColor("_Color", pickedColor);
+                obj.material.SetColor("_Color", colors[Random.Range(0, colors.Count)]);
             }
             catch
             {

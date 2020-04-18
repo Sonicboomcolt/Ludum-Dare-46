@@ -595,6 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359516703}
   - component: {fileID: 1359516702}
+  - component: {fileID: 1359516704}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -614,7 +615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b1ee2eebc705742942e998f8e1c13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decayTime: 15
+  decayTime: 35
   cooldownDecayTime: 0
 --- !u!4 &1359516703
 Transform:
@@ -631,6 +632,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1359516704
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359516701}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1468467728
 PrefabInstance:
   m_ObjectHideFlags: 0
