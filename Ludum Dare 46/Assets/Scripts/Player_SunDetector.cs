@@ -26,7 +26,8 @@ public class Player_SunDetector : MonoBehaviour
     private float coolDown;
 
     [SerializeField] private float dischargeTime = 1f;
-    private float discoolDown;
+	private float discoolDown;
+	public GameObject Death;
 	public Slider slider;
 	public TMPro.TMP_Text Percent;
     private void Start()
@@ -36,10 +37,15 @@ public class Player_SunDetector : MonoBehaviour
 	    discoolDown = dischargeTime;
 	    Percent.text = ("%:" + Charge.ToString());
 	    slider.value = Charge;
+	    Death.SetActive(false);
     }
 
     private void Update()
-    {
+	{
+		if(Charge <= 0)
+		{
+			Death.SetActive(true);
+		}
         if (!SunDirection) return; //If the sun transform is not found, disable the script.
 
         //Lower the player health every frame

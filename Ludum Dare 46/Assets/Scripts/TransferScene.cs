@@ -15,6 +15,10 @@ public class TransferScene : MonoBehaviour
 	{
 		SceneManager.LoadScene(0);
 	} 
+	public void LevelHard()
+	{
+		SceneManager.LoadScene(3);
+	}
 	public void QUIT()
 	{
 		Application.Quit();

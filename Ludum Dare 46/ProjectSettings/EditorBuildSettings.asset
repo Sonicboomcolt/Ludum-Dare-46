@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Levels/MainMenu.unity
     guid: 075a844b726c85643849a23e14b7d4c7
   - enabled: 1
-    path: Assets/Levels/World.unity
+    path: Assets/Levels/World1.unity
     guid: ff27fb51781177c40aa82bba738da640
   - enabled: 1
     path: Assets/Levels/World2.unity
     guid: 40de0e541f9d9d24496be2d7b64ba225
+  - enabled: 1
+    path: Assets/Levels/World3.unity
+    guid: 8960b52134e8c3f458829d8f83f69da8
   m_configObjects: {}
