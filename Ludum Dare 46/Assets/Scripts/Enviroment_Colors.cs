@@ -10,20 +10,23 @@ public class Enviroment_Colors : MonoBehaviour
     [SerializeField] List<Color> colors = new List<Color>();
 
     private void Start()
-    {
-        //Color pickedColor = colors[Random.Range(0, colors.Count)];
+	{
+		if(Meshes != null)
+		{
+			//Color pickedColor = colors[Random.Range(0, colors.Count)];
 
-        //sets the colors based on the meshses selected.
-        foreach (var obj in Meshes)
-        {
-            try
-            {
-                obj.material.SetColor("_Color", colors[Random.Range(0, colors.Count)]);
-            }
-            catch
-            {
-                Debug.LogError("Could not change colors, mesh or colors not set");
-            }
-        }
+			//sets the colors based on the meshses selected.
+			foreach (var obj in Meshes)
+			{
+				try
+				{
+					obj.material.SetColor("_Color", colors[Random.Range(0, colors.Count)]);
+				}
+					catch
+					{
+						Debug.LogError("Could not change colors, mesh or colors not set");
+					}
+			}
+		}
     }
 }
