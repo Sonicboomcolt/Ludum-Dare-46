@@ -30,6 +30,7 @@ public class Player_SunDetector : MonoBehaviour
 	public GameObject Death;
 	public Slider slider;
 	public TMPro.TMP_Text Percent;
+	//public AudioSource AS;
     private void Start()
     {
         //Set base values
@@ -42,6 +43,10 @@ public class Player_SunDetector : MonoBehaviour
 
     private void Update()
 	{
+		//if(Charge == 40)
+		//{
+		//	AS.Play();
+		//}
 		if(Charge <= 0)
 		{
 			Death.SetActive(true);
