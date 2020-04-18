@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player_WaterSystem : MonoBehaviour
 {
-    [SerializeField] public bool canPickupWater;
-    [SerializeField] private bool hasWater;
+    public bool canPickupWater;
+    public bool hasWater;
 
     private void Update()
     {
