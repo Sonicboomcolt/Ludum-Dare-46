@@ -1048,6 +1048,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_New
       objectReference: {fileID: 0}
+    - target: {fileID: 8756772540320280493, guid: 1f41539c729e423468a7a82e275c232b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75143963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756772540320280493, guid: 1f41539c729e423468a7a82e275c232b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75143963
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756772540320280493, guid: 1f41539c729e423468a7a82e275c232b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75143963
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f41539c729e423468a7a82e275c232b, type: 3}
 --- !u!1001 &3246986370841247150
