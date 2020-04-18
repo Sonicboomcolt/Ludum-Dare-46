@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b1ee2eebc705742942e998f8e1c13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decayTime: 35
+  decayTime: 120
   cooldownDecayTime: 0
   plant: {fileID: 7052082149956449169}
 --- !u!135 &3246986372200688014
