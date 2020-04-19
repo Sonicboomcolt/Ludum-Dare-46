@@ -19,6 +19,10 @@ public class TransferScene : MonoBehaviour
 	{
 		SceneManager.LoadScene(3);
 	}
+	public void LevelExtream()
+	{
+		SceneManager.LoadScene(4);
+	}
 	public void QUIT()
 	{
 		Application.Quit();

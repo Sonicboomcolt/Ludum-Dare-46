@@ -14,20 +14,22 @@ public class Enviroment_Plant : MonoBehaviour
 
 	[SerializeField] GameObject plant;
 
+	public Slider slider;
     private void Start()
 	{
         plantDead = false;
         cooldownDecayTime = decayTime;
-        useButton = true;
+		useButton = true;
+		slider.value = cooldownDecayTime;
     }
 
     private void Update()
-    {
+	{
+		slider.value = cooldownDecayTime;
         //Check if the plant is alive and decay
         if(!plantDead)
         {
             cooldownDecayTime -= Time.deltaTime;
-
             if (cooldownDecayTime < 0)
             {
                 plantDead = true;
@@ -41,7 +43,8 @@ public class Enviroment_Plant : MonoBehaviour
         if (other.tag == "Player")
         {
             waterSystem = other.GetComponent<Player_WaterSystem>();
-            waterSystem.feedPlant = true;
+	        waterSystem.feedPlant = true;
+	        slider.value = cooldownDecayTime;
             if (Input.GetKeyDown(KeyCode.E) && !plantDead && !useButton)
             {
                 if (waterSystem.hasWater)
@@ -59,6 +62,7 @@ public class Enviroment_Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+	        slider.value = cooldownDecayTime;
             waterSystem = other.GetComponent<Player_WaterSystem>();
             waterSystem.feedPlant = true;
             if (!plantDead && useButton)
@@ -79,6 +83,7 @@ public class Enviroment_Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+	        slider.value = cooldownDecayTime;
             waterSystem = other.GetComponent<Player_WaterSystem>();
             waterSystem.feedPlant = false;
         }
