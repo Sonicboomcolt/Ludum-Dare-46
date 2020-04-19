@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 3197138957640198613, guid: 2adf652a2cc1a9541a1f0a4bc807ef28,
         type: 3}
       propertyPath: decayTime
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3207521886432059342, guid: 2adf652a2cc1a9541a1f0a4bc807ef28,
         type: 3}
@@ -12183,7 +12183,7 @@ PrefabInstance:
     - target: {fileID: 3197138957640198613, guid: 2adf652a2cc1a9541a1f0a4bc807ef28,
         type: 3}
       propertyPath: decayTime
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3207521886432059342, guid: 2adf652a2cc1a9541a1f0a4bc807ef28,
         type: 3}
@@ -13409,9 +13409,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 120
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 120
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -14470,9 +14470,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 120
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 120
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21587,7 +21587,7 @@ PrefabInstance:
     - target: {fileID: 3197138957640198613, guid: 2adf652a2cc1a9541a1f0a4bc807ef28,
         type: 3}
       propertyPath: decayTime
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3207521886432059342, guid: 2adf652a2cc1a9541a1f0a4bc807ef28,
         type: 3}
@@ -25764,9 +25764,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 120
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 120
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
