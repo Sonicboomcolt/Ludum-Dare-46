@@ -20,12 +20,18 @@ public class Enviroment_Plant : MonoBehaviour
         plantDead = false;
         cooldownDecayTime = decayTime;
 		useButton = true;
-		slider.value = cooldownDecayTime;
+		if(slider != null)
+		{
+			slider.value = cooldownDecayTime;
+		}
     }
 
     private void Update()
 	{
-		slider.value = cooldownDecayTime;
+		if(slider != null)
+		{
+			slider.value = cooldownDecayTime;
+		}
         //Check if the plant is alive and decay
         if(!plantDead)
         {
@@ -44,7 +50,10 @@ public class Enviroment_Plant : MonoBehaviour
         {
             waterSystem = other.GetComponent<Player_WaterSystem>();
 	        waterSystem.feedPlant = true;
-	        slider.value = cooldownDecayTime;
+	        if(slider != null)
+	        {
+		        slider.value = cooldownDecayTime;
+	        }
             if (Input.GetKeyDown(KeyCode.E) && !plantDead && !useButton)
             {
                 if (waterSystem.hasWater)
@@ -62,7 +71,10 @@ public class Enviroment_Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-	        slider.value = cooldownDecayTime;
+	        if(slider != null)
+	        {
+		        slider.value = cooldownDecayTime;
+	        }
             waterSystem = other.GetComponent<Player_WaterSystem>();
             waterSystem.feedPlant = true;
             if (!plantDead && useButton)
@@ -83,7 +95,10 @@ public class Enviroment_Plant : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-	        slider.value = cooldownDecayTime;
+	        if(slider != null)
+	        {
+		        slider.value = cooldownDecayTime;
+	        }
             waterSystem = other.GetComponent<Player_WaterSystem>();
             waterSystem.feedPlant = false;
         }
