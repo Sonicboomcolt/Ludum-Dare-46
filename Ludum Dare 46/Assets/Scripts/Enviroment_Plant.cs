@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Enviroment_Plant : MonoBehaviour
 {
     [SerializeField] private float decayTime = 15f;
-    [SerializeField] private float cooldownDecayTime;
+	[SerializeField] public float cooldownDecayTime;
     private bool plantDead;
 
     private bool useButton;
