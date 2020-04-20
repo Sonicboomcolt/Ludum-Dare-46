@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class Music_Manager : MonoBehaviour
 {
-    private void Awake()
+    private static Music_Manager musicInstance;
+
+    void Awake()
     {
         DontDestroyOnLoad(this);
+
+        if (musicInstance == null)
+        {
+            musicInstance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
