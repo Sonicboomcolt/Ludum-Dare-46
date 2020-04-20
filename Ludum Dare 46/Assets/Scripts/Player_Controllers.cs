@@ -20,12 +20,19 @@ public class Player_Controllers : MonoBehaviour
     private float InputX;
     private float InputY;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource source;
+
+
     private void Awake()
     {
         //Grab the controller
         controller = GetComponent<CharacterController>();
         //Grab the Sun Detector
         detector = GetComponent<Player_SunDetector>();
+
+        source.volume = 0;
+        source.pitch = 0;
     }
 
     private void FixedUpdate()
@@ -42,5 +49,11 @@ public class Player_Controllers : MonoBehaviour
 
         //Moves the player and slows them when they have low charge
         controller.Move(MoveDir * moveSpeed * detector.Charge * Time.deltaTime);
+
+        float volSpeed = Mathf.Clamp(controller.velocity.magnitude, 0, 1);
+        float pitchSpeed = controller.velocity.magnitude;
+
+        source.volume = Mathf.Lerp(source.volume, volSpeed, Time.deltaTime * 5);
+        source.pitch = Mathf.Lerp(source.volume, pitchSpeed, Time.deltaTime * 5);
     }
 }
