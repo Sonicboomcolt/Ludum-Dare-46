@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000210798717548756}
   m_LocalRotation: {x: -0.00000020861614, y: -0.70710725, z: 0.00000021606702, w: -0.7071064}
-  m_LocalPosition: {x: 18.004293, y: 5.8420005, z: 92.055374}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.500001, y: 8, z: 4.500001}
   m_Children:
   - {fileID: 6815609240561320456}
@@ -636,6 +636,7 @@ MonoBehaviour:
   decayTime: 120
   cooldownDecayTime: 0
   plant: {fileID: 6957814367857177588}
+  slider: {fileID: 0}
 --- !u!135 &3197138957640198635
 SphereCollider:
   m_ObjectHideFlags: 0
